@@ -35,7 +35,8 @@ const formData = [
 ["Topic", topic],
 ["Message", message]
 ];
-
+// Show the results section
+const resultContainer = document.getElementById("resultContainer");
 const resultBody = document.querySelector("#resultTable tbody");
 resultBody.innerHTML = ""; // Clear previous entries
 resultContainer.style.display = "block";
@@ -48,29 +49,3 @@ resultBody.appendChild(row);
 // Reset the form
 this.reset();
 });
-Slink.
-
-// Show the results section
-const resultContainer = document.getElementById("resultContainer");
-
-
-// Get selected radio
-const contactMethod = document.querySelector('input[name="contactMethod"]:checked').value;
-
-// Get selected checkboxes
-const services = Array.from(document.querySelectorAll('input[name="service"]:checked'))
-.map(cb => cb.value)
-.join(", ") || "None";
-
-// Display everything in an alert
-	alert(
-`--- CONTACT FORM DATA ---\n\n` +
-`Name: ${name}\nEmail: ${email}\nPassword: ${password}\nPhone: ${phone}\nWebsite:
-${website}\nAge: ${age}\nDate of Birth: ${dob}\nPreferred Time: ${time}\nFavorite Color:
-${color}\nInterest Level: ${range}\nContact Method: ${contactMethod}\nServices Interested In:
-${services}\nTopic: ${topic}\nMessage: ${message}`
-);
-// Reset the form
-this.reset();
-});
-
